@@ -1,0 +1,100 @@
+{
+  "name": "csv-super",
+  "version": "1.0.0",
+  "description": "Read a 10GB CSV file without crashing RAM — Streaming CSV parser with fixed 50MB memory footprint",
+  "keywords": [
+    "csv",
+    "csv-parser",
+    "streaming",
+    "large-files",
+    "async-generator",
+    "backpressure",
+    "memory-efficient",
+    "worker-threads",
+    "data-processing",
+    "typescript",
+    "etl",
+    "data-analyst",
+    "10gb",
+    "high-performance",
+    "node",
+    "batch",
+    "tsv",
+    "rfc4180"
+  ],
+  "author": "csv-super Team <hello@csv-super.dev>",
+  "license": "MIT",
+  "homepage": "https://csv-super.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Brah-Timo/csv-super"
+  },
+  "bugs": {
+    "url": "https://github.com/Brah-Timo/csv-super/issues"
+  },
+  "type": "module",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    }
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc -p tsconfig.build.json",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:watch": "tsc -p tsconfig.build.json --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:unit": "vitest run tests/unit",
+    "test:integration": "vitest run tests/integration",
+    "bench": "tsx tests/benchmarks/memory-bench.ts",
+    "bench:speed": "tsx tests/benchmarks/speed-bench.ts",
+    "lint": "eslint src/ tests/ --ext .ts",
+    "lint:fix": "eslint src/ tests/ --ext .ts --fix",
+    "format": "prettier --write src/ tests/ examples/",
+    "format:check": "prettier --check src/ tests/ examples/",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf dist/",
+    "prepublishOnly": "npm run clean && npm run build && npm test && npm run typecheck",
+    "release": "npm run prepublishOnly && npm publish",
+    "release:dry": "npm pack --dry-run"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@vitest/coverage-v8": "^2.1.9",
+    "eslint": "^9.0.0",
+    "prettier": "^3.3.0",
+    "rimraf": "^5.0.0",
+    "tsx": "^4.15.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.1.9"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-win32-x64-msvc": "^4.0.0",
+    "@rollup/rollup-win32-arm64-msvc": "^4.0.0",
+    "@rollup/rollup-linux-x64-gnu": "^4.0.0",
+    "@rollup/rollup-darwin-x64": "^4.0.0",
+    "@rollup/rollup-darwin-arm64": "^4.0.0"
+  },
+  "dependencies": {}
+}

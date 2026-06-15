@@ -1,0 +1,13 @@
+id,description,notes,value
+1,"Contains a comma, inside",Normal field,100
+2,"Contains ""double quotes""",Another field,200
+3,"Contains
+a newline inside",Third field,300
+4,Plain field,"Another ""quoted"" field",400
+5,"Quotes and, comma","Also quoted",500
+6,,Empty first field,600
+7,Last field empty,,700
+8,"Trailing space   ","  Leading space",800
+9,unicode: こんにちは,unicode: مرحبا,900
+10,"CRLF inside
+field",normal,1000

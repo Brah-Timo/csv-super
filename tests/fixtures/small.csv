@@ -1,0 +1,11 @@
+id,name,email,age,city,country,salary,department,active
+1,Alice Johnson,alice@example.com,30,New York,USA,95000,Engineering,true
+2,Bob Smith,bob@example.com,25,London,UK,72000,Marketing,true
+3,Charlie Brown,charlie@example.com,35,Paris,France,88000,Sales,false
+4,Diana Prince,diana@example.com,28,Berlin,Germany,91000,Engineering,true
+5,Eve Wilson,eve@example.com,32,Tokyo,Japan,85000,HR,true
+6,"Smith, John",john.smith@example.com,45,Sydney,Australia,120000,Management,true
+7,Maria García,maria@example.com,27,Madrid,Spain,67000,Design,true
+8,"O'Brien, Sean",sean@example.com,38,Dublin,Ireland,79000,Sales,false
+9,李明,liming@example.com,31,Beijing,China,76000,Engineering,true
+10,Ahmed Hassan,ahmed@example.com,29,Cairo,Egypt,58000,Marketing,true
